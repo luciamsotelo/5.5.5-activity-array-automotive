@@ -1,5 +1,40 @@
 //this includes the vehicle class as a module
 const VehicleModule = require("./vehicleBaseClass")
+class VehicleModel {
+    constructor(make, model, year, color, mileage) {
+        super(make, model, year, color, mileage)
+        this.maxPassengers = 5;
+        this.passenger = 0;
+        this.numberOfWheels = 4;
+        this.maxSpeed = 160;
+        this.fuel = 10;
+        this.scheduleService = false;
+    }
+}
+
+start()
+{
+    if (this.fuel > 0) {
+        console.log("start the engine");
+        return this.start = true
+    } else {
+        console.log("do not start engine");
+        return this.start = false;
+    }
+}
+
+scheduleService()
+{
+    if (this.mileage > 30000) {
+        console.log("time for maintenance");
+        return this.mileage = true
+    } else {
+        console.log("no service needed");
+        return this.mileage = false;
+    }
+}
+
+
 
 //this shows how to call from this module...
 let v = new VehicleModule.Vehicle("Mercury", "Sedan", "1965", "color", "mileage");

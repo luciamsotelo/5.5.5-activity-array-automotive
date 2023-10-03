@@ -1,6 +1,6 @@
 //this includes the vehicle class as a module
 const VehicleModule = require("./vehicleBaseClass")
-class VehicleModel {
+class car extends VehicleModule.Vehicle{
     constructor(make, model, year, color, mileage) {
         super(make, model, year, color, mileage)
         this.maxPassengers = 5;
@@ -10,30 +10,20 @@ class VehicleModel {
         this.fuel = 10;
         this.scheduleService = false;
     }
-}
 
-start()
-{
-    if (this.fuel > 0) {
-        console.log("start the engine");
-        return this.start = true
-    } else {
-        console.log("do not start engine");
-        return this.start = false;
+
+    //Missing the loadPassengers function 
+
+    scheduleService() {
+        if (this.mileage > 30000) {
+            console.log("time for maintenance");
+            return this.mileage = true
+        } else {
+            console.log("no service needed");
+            return this.mileage = false;
+        }
     }
 }
-
-scheduleService()
-{
-    if (this.mileage > 30000) {
-        console.log("time for maintenance");
-        return this.mileage = true
-    } else {
-        console.log("no service needed");
-        return this.mileage = false;
-    }
-}
-
 
 
 //this shows how to call from this module...
